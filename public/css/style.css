@@ -33,7 +33,7 @@ header .header--left{
     justify-content: center;
     align-items: center;
 }
-header .header--left img{
+header .header--left a img{
     height: 40px;
     width: auto;
 }
@@ -49,7 +49,7 @@ header input {
     max-width: 200px;
     border-radius: 10px;
 }
-header .logo{
+header .header--left a{
     display: flex;
     align-items: center;
 }

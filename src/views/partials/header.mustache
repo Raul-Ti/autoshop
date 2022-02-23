@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoShop - A melhor galeria de carros</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header--left">
+        <a href="/"><img src="images/favicon.png" alt="logo"></a>
+        <a href="/">AutoShop</a>
+        </div>
+        <form method="GET" action="/search">
+            <input type="search" name="q" placeholder="Pesquise por modelo"  value="{{ query }}" />
+        </form>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li class="{{#menu.all}} active {{/menu.all}}"><a href="/">Todos</a></li>
+        <li class="{{#menu.honda}} active {{/menu.honda}}"><a href="/honda">Honda</a></li>
+        <li class="{{#menu.fiat}} active {{/menu.fiat}}"><a href="/fiat">Fiat</a></li>
+        <li class="{{#menu.chevrolet}} active {{/menu.chevrolet}}"><a href="/chevrolet">Chevrolet</a></li>
+    </ul>
+</nav>

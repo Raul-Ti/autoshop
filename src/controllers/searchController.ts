@@ -1,7 +1,22 @@
-import {Request, Response} from 'express'
+import { Request, Response } from 'express'
+import { Car } from '../models/car'
+import { createMenuObject } from '../helpers/createMenuObject'
 
 export const search = (req: Request, res:Response) =>{
 
-    // res.render('pages/search')
+    let query: string = req.query.q as string
+    
+    if(!query){
+        res.redirect('/')
+        return
+    }
+
+    let list = Car.getFromName(query)
+
+    res.render('pages/page', {
+        menu: createMenuObject(''),
+        list,
+        query
+    })
 
 }

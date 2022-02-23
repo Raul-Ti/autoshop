@@ -1,0 +1,32 @@
+
+{{>partials/header}}
+
+{{#banner}}
+<section class="banner" style="background-image: url('images/{{banner}}')">{{title}}</section>
+<h2>{{title}} disponíveis na galeria</h2>
+{{/banner}}
+
+
+<div class="div--arrow1">
+<img class="arrow" src="images/down.png" alt="">
+</div>
+
+<div class="container list">
+    {{#list}}
+        <div class="item">
+            <img src="images/{{image}}" class="item--image" />
+            <div class="item--name">{{name}}</div>
+            <div class="item--color">Cor: {{color}}</div>
+            <div class="item--manufacturer">Marca: {{manufacturer}}</div>
+        </div>
+    {{/list}}
+
+</div>
+
+{{^list}}
+    <div class="container no-list">
+        <h2>Não há carros disponíveis nestas condições</h2>
+    </div>
+{{/list}}
+
+{{>partials/footer}}
